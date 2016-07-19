@@ -70,7 +70,7 @@ class UpdateUnityEditorProcess
             GetWindowText(hwnd.ToInt32(), sbtitle, 255);
             string strTitle = sbtitle.ToString();
             string[] ss = strTitle.Split('-');
-            if (strTitle.Length > 0 && !ss[0].Contains(UTitle))
+            if (ss.Length > 0 && !strTitle.Contains(UTitle))
             {
                 SetWindowText(hwnd.ToInt32(), string.Format("{0} - {1}", UTitle, strTitle));
             }
